@@ -19,7 +19,6 @@ public:
 	AssetLibrary() {};
 	~AssetLibrary() {};
 	bool initialize(ResourceManager* devices);
-	//Will convert all string values to pass by reference.
 	Texture* getArtAsset(std::string name);
 	bool addArtAsset(std::string name, std::string path);	
 	
@@ -33,7 +32,6 @@ public:
 	bool hasSounds();
 
 private:
-	//Will pass string values to pass by reference
 	std::map<std::string, std::unique_ptr<Texture>> artLibrary;	
 	std::map<std::string, std::unique_ptr<SoundEffect> > soundEffectLibrary;
 	std::map<std::string, std::unique_ptr<BackgroundMusic> > musicLibrary;
